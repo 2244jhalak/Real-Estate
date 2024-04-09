@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Modern Condo with City Views",
+      "segment_name": "Residential",
+      "description": "Contemporary condo boasting panoramic city views and luxurious amenities.",
+      "price": "$1,800,000",
+      "status": "sale",
+      "area": "1800 sq ft",
+      "location": "Los Angeles, California",
+      "facilities": ["rooftop terrace", "fitness center", "concierge service"],
+      "image": "modern_condo.jpg"
+    },
+    {
+      "id": 2,
+      "estate_title": "Charming Family Home",
+      "segment_name": "Residential",
+      "description": "Lovely family home with a spacious backyard, perfect for outdoor activities.",
+      "price": "$750,000",
+      "status": "sale",
+      "area": "2200 sq ft",
+      "location": "Denver, Colorado",
+      "facilities": ["backyard patio", "fireplace", "home office"],
+      "image": "family_home.jpg"
+    },
+    {
+      "id": 3,
+      "estate_title": "Luxury Penthouse in Downtown",
+      "segment_name": "Residential",
+      "description": "Elegant penthouse offering unparalleled luxury living in the heart of the city.",
+      "price": "$3,500,000",
+      "status": "sale",
+      "area": "3500 sq ft",
+      "location": "New York City, New York",
+      "facilities": ["private elevator", "rooftop pool", "home theater"],
+      "image": "luxury_penthouse.jpg"
+    },
+    {
+      "id": 4,
+      "estate_title": "Sunny Beach House",
+      "segment_name": "Residential",
+      "description": "Bright and airy beach house with direct access to the sand and surf.",
+      "price": "$1,200,000",
+      "status": "sale",
+      "area": "2000 sq ft",
+      "location": "Miami, Florida",
+      "facilities": ["oceanfront deck", "outdoor shower", "gourmet kitchen"],
+      "image": "beach_house.jpg"
+    },
+    {
+      "id": 5,
+      "estate_title": "Cozy Townhouse in Historic District",
+      "segment_name": "Residential",
+      "description": "Quaint townhouse nestled in a charming historic district, full of character and charm.",
+      "price": "$600,000",
+      "status": "sale",
+      "area": "1600 sq ft",
+      "location": "Charleston, South Carolina",
+      "facilities": ["garden courtyard", "hardwood floors", "updated kitchen"],
+      "image": "townhouse.jpg"
+    },
+    {
+      "id": 6,
+      "estate_title": "Mountain Retreat with Stunning Views",
+      "segment_name": "Residential",
+      "description": "Serene mountain retreat offering breathtaking views and outdoor recreational opportunities.",
+      "price": "$900,000",
+      "status": "rent",
+      "area": "2500 sq ft",
+      "location": "Aspen, Colorado",
+      "facilities": ["wrap-around deck", "hot tub", "ski-in/ski-out access"],
+      "image": "mountain_retreat.jpg"
+    }
+  ]
+  
