@@ -8,6 +8,7 @@ import {
 import './index.css'
 import Root from './Layout/Root';
 import Home from './components/Home/Home';
+import PropertyDetails from './components/PropertyDetails/PropertyDetails';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,12 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home></Home>
+      },
+      {
+        path:"/details/:id",
+        
+        element:<PropertyDetails></PropertyDetails>,
+        loader:()=>fetch("/Residential.json")
       }
     ]
   },
