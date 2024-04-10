@@ -9,7 +9,7 @@
       "area": "1800 sq ft",
       "location": "Los Angeles, California",
       "facilities": ["rooftop terrace", "fitness center", "concierge service"],
-      "image": "modern_condo.jpg"
+      "image": "https://i.ibb.co/2tXwNCR/minimalist-modern-apartment-with-city-view-950002-68344.jpg"
     },
     {
       "id": 2,
@@ -21,7 +21,7 @@
       "area": "2200 sq ft",
       "location": "Denver, Colorado",
       "facilities": ["backyard patio", "fireplace", "home office"],
-      "image": "family_home.jpg"
+      "image": "https://i.ibb.co/26SJ3LG/1719419026607571.jpg"
     },
     {
       "id": 3,
@@ -33,7 +33,7 @@
       "area": "3500 sq ft",
       "location": "New York City, New York",
       "facilities": ["private elevator", "rooftop pool", "home theater"],
-      "image": "luxury_penthouse.jpg"
+      "image": "https://i.ibb.co/pb0jsYr/ocr-l-penthouse-1102-02.jpg"
     },
     {
       "id": 4,
@@ -45,7 +45,7 @@
       "area": "2000 sq ft",
       "location": "Miami, Florida",
       "facilities": ["oceanfront deck", "outdoor shower", "gourmet kitchen"],
-      "image": "beach_house.jpg"
+      "image": "https://i.ibb.co/P5HdkYV/UK-Sunny-Beach-Bulgaria-Header.jpg"
     },
     {
       "id": 5,
@@ -57,7 +57,7 @@
       "area": "1600 sq ft",
       "location": "Charleston, South Carolina",
       "facilities": ["garden courtyard", "hardwood floors", "updated kitchen"],
-      "image": "townhouse.jpg"
+      "image": "https://i.ibb.co/XpYx8QQ/Affordable-Historic-NYC-Neighborhoods-afa683.jpg"
     },
     {
       "id": 6,
@@ -69,7 +69,7 @@
       "area": "2500 sq ft",
       "location": "Aspen, Colorado",
       "facilities": ["wrap-around deck", "hot tub", "ski-in/ski-out access"],
-      "image": "mountain_retreat.jpg"
+      "image": "https://i.ibb.co/s3QTX34/61116b73-0765-492d-9a8e-f83cd5a6f6d4.jpg"
     }
   ]
   
