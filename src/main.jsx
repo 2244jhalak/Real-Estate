@@ -12,6 +12,7 @@ import PropertyDetails from './components/PropertyDetails/PropertyDetails';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import AuthProvider from './provider/AuthProvider';
+import PrivateRoute from './Routes/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -33,7 +34,7 @@ const router = createBrowserRouter([
       {
         path:"/details/:id",
         
-        element:<PropertyDetails></PropertyDetails>,
+        element:<PrivateRoute><PropertyDetails></PropertyDetails></PrivateRoute>,
         loader:()=>fetch("/Residential.json")
       }
     ]

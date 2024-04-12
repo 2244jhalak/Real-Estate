@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle,FaGithub } from 'react-icons/fa';
 import { GoogleAuthProvider, signInWithPopup, GithubAuthProvider } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
@@ -10,6 +10,8 @@ import { useContext } from "react";
 const Login = () => {
   
 const {signInUser} = useContext(AuthContext);
+const location=useLocation();
+  const navigate=useNavigate();  
 const googleProvider = new GoogleAuthProvider();
 const githubProvider=new GithubAuthProvider();
 const handleLogin=e=>{
@@ -20,6 +22,7 @@ const handleLogin=e=>{
   signInUser(email,password)
   .then(result=>{
     console.log(result.user);
+    navigate(location?.state?location.state:'/');
   })
   .catch(error=>{
     console.log(error);
@@ -28,16 +31,20 @@ const handleLogin=e=>{
 const handleGoogle=()=>{
   signInWithPopup(auth,googleProvider )
   .then(result=>{
-    console.log(result.user)
+    console.log(result.user);
+    navigate(location?.state?location.state:'/');
+
   })
   .catch(error=>{
     console.log(error);
+
   })
 }
 const handleGithub=()=>{
   signInWithPopup(auth,githubProvider)
   .then(result=>{
-    console.log(result.user)
+    console.log(result.user);
+    navigate(location?.state?location.state:'/');
   })
   .catch(error=>{
     console.log(error);
