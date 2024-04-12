@@ -1,4 +1,6 @@
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { FaEye,FaEyeSlash } from 'react-icons/fa';
@@ -7,8 +9,7 @@ import { AuthContext } from "../../provider/AuthProvider";
 
 
 const Register = () => {
-  const [success,setSuccess] = useState('');
-  const [reegisterError,setRegisterError] = useState('');
+  
   const [showPassword,setShowPassword]= useState(false);
   const {createUser} =useContext(AuthContext);
     
@@ -19,10 +20,9 @@ const Register = () => {
       const photo=e.target.photo.value;
       const password=e.target.password.value;
       console.log(name,email,photo,password);
-      setRegisterError('');
-      setSuccess('');
+      
       if(password.length<6){
-        setRegisterError('Password should be at least 6 characters');
+        toast('Password should be at least 6 characters');
         return;
       }
       // else if(!/^(?=.*[a-z])(?=.*[A-Z])/.test(password)){
@@ -30,23 +30,24 @@ const Register = () => {
       //   return;
       // }
       else if(!/[A-Z]/.test(password)){
-        setRegisterError('Password should have a uppercase');
+        toast('Password should have a uppercase');
         return;
       }
       else if(!/[a-z]/.test(password)){
-        setRegisterError('Password should have a lowercase');
+        toast('Password should have a lowercase');
         return;
       }
       
       createUser(email,password)
       .then(result=>{
         console.log(result.user);
-        setSuccess('User created successfully');
+        toast('User created successfully');
+        toast('User created successfully')
       })
       
       .catch(error=>{
         console.log(error);
-        setRegisterError('auth/email-already-in-use');
+        toast('auth/email-already-in-use');
       })
 
     }
@@ -95,17 +96,14 @@ const Register = () => {
           <button className="btn btn-primary font-bold text-white">Register</button>
         </div>
       </form>
+      
       <p className="ml-8 mb-4">Already have an account? Please <Link className="underline" to="/login">Login</Link></p>
     </div>
-    {
-            reegisterError && <p className="font-bold text-red-700">{reegisterError}</p>
-    }
-    {
-            success && <p className="font-bold text-green-700">{success}</p>
-    }
+    
     
   </div>
 </div>
+<ToastContainer></ToastContainer>
             
         </div>
     );
