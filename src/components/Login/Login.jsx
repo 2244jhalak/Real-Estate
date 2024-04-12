@@ -2,14 +2,29 @@ import { Link } from "react-router-dom";
 import { FaGoogle,FaGithub } from 'react-icons/fa';
 import { GoogleAuthProvider, signInWithPopup, GithubAuthProvider } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
+import { AuthContext } from "../../provider/AuthProvider";
+import { useContext } from "react";
 
 
 
 const Login = () => {
   
-
+const {signInUser} = useContext(AuthContext);
 const googleProvider = new GoogleAuthProvider();
 const githubProvider=new GithubAuthProvider();
+const handleLogin=e=>{
+  e.preventDefault();
+  const email=e.target.email.value;
+  const password=e.target.password.value;
+  console.log(email,password);
+  signInUser(email,password)
+  .then(result=>{
+    console.log(result.user);
+  })
+  .catch(error=>{
+    console.log(error);
+  })
+}
 const handleGoogle=()=>{
   signInWithPopup(auth,googleProvider )
   .then(result=>{
@@ -37,7 +52,7 @@ const handleGithub=()=>{
       
     </div>
     <div className="card shrink-0 w-[300px] shadow-2xl bg-base-100">
-      <form className="card-body">
+      <form onSubmit={handleLogin} className="card-body">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
