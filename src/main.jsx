@@ -15,6 +15,7 @@ import AuthProvider from './provider/AuthProvider';
 import PrivateRoute from './Routes/PrivateRoute';
 import UserDetails from './components/UserDetails/UserDetails';
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import Contact from './components/Contact/Contact';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path:"/register",
         element:<Register></Register>
+      },
+      {
+        path:"/contact",
+        element:<Contact></Contact>
       },
       {
         path:"/details/:id",
