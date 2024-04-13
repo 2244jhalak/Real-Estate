@@ -1,6 +1,8 @@
 import { useContext } from "react";
+
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
+import User from "../../../src/assets/images/User.jpg"
 
 
 const Header = () => {
@@ -38,12 +40,18 @@ const Header = () => {
     {
       user ? 
            <div className="flex items-center">
-              <p>{user.displayName}</p>
+              <Link>
+              <div className="tooltip tooltip-left" data-tip={user.displayName}>
+                     <img className="h-12 w-12 rounded-[50%]" src={User} alt="" />
+              </div>
+              </Link>
               <button onClick={logOutUser} className="btn bg-black text-white font-bold ml-4">Log Out</button>
 
            </div>
              :
-           <button className="btn btn-primary font-bold ml-4"><Link to="/login">Login</Link></button>
+            <Link to="/login">
+                    <button className="btn btn-primary font-bold ml-4 text-white">Login</button>
+            </Link>
     }
     
     

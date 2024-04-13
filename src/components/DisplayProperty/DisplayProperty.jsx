@@ -30,7 +30,7 @@ const DisplayProperty = ({property}) => {
          
   </div>
   <div className='text-right mx-4 my-3'>
-  <button className='btn text-white btn-success'><Link to={`/details/${id}`}>View Property</Link></button>
+  <Link to={`/details/${id}`}><button className='btn text-white btn-success'>View Property</button></Link>
     
   </div>
 </div>
