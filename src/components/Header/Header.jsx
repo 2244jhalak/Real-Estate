@@ -42,8 +42,15 @@ const Header = () => {
     {
       user ? 
            <div className="flex items-center">
+              <Link to="/updateProfile">
+                  <button className="btn btn-ghost">Update Profile</button>
+              </Link>
+              <Link to="/userProfile">
+                  <button className="btn btn-ghost">User Profile</button>
+              </Link>
+              
               <Link to="/UserDetails">
-              <div className="tooltip tooltip-left" data-tip={user.displayName?user.displayName:user.email}>
+              <div className="tooltip tooltip-bottom" data-tip={user.displayName?user.displayName:user.email}>
                      <img className="h-12 w-12 rounded-[50%]" src={user.photoURL} alt="" />
               </div>
               </Link>

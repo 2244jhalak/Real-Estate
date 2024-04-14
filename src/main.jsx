@@ -16,6 +16,8 @@ import PrivateRoute from './Routes/PrivateRoute';
 import UserDetails from './components/UserDetails/UserDetails';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import Contact from './components/Contact/Contact';
+import UserProfile from './components/UserProfile/UserProfile';
+import UpdateProfile from './components/UpdateProfile/UpdateProfile';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +50,14 @@ const router = createBrowserRouter([
       {
         path:"/UserDetails",
         element:<PrivateRoute><UserDetails></UserDetails></PrivateRoute>
+      },
+      {
+        path:"/userProfile",
+        element:<PrivateRoute><UserProfile></UserProfile></PrivateRoute>
+      },
+      {
+        path:"/updateProfile",
+        element:<PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
       }
     ]
   },
