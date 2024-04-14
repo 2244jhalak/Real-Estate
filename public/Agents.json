@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "name": "John Smith",
+      "image": "https://i.ibb.co/LtBQ6XZ/staff-1.jpg",
+      "job": "Chief Operating Officer",
+      "phone_no": "(213) 555-1234",
+      "office_no": "(213) 555-9876",
+      "fax_no": "(213) 555-4321"
+    },
+    {
+      "id": 2,
+      "name": "Emily Johnson",
+      "image": "https://i.ibb.co/cb7TBVr/staff-4.jpg",
+      "job": "Chief Analytics Officer",
+      "phone_no": "(213) 555-5678",
+      "office_no": "(213) 555-9876",
+      "fax_no": "(213) 555-4321"
+    },
+    {
+      "id": 3,
+      "name": "Michael Williams",
+      "image": "https://i.ibb.co/q9tVx99/staff-3.jpg",
+      "job": "Sales Manager",
+      "phone_no": "(213) 555-9012",
+      "office_no": "(213) 555-9876",
+      "fax_no": "(213) 555-4321"
+    },
+    {
+      "id": 4,
+      "name": "Sarah Miller",
+      "image": "https://i.ibb.co/wsFGJ3Y/staff-2.jpg",
+      "job": "Property Manager",
+      "phone_no": "(213) 555-2468",
+      "office_no": "(213) 555-9876",
+      "fax_no": "(213) 555-4321"
+    },
+    {
+      "id": 5,
+      "name": "David Brown",
+      "image": "https://i.ibb.co/Vwd5TfQ/staff-5.jpg",
+      "job": "Chief Executive Officer",
+      "phone_no": "(213) 555-1357",
+      "office_no": "(213) 555-9876",
+      "fax_no": "(213) 555-4321"
+    },
+    {
+      "id": 6,
+      "name": "Jennifer Lee",
+      "image": "https://i.ibb.co/2ZRP19B/staff-6.jpg",
+      "job": "Marketing Coordinator",
+      "phone_no": "(213) 555-9876",
+      "office_no": "(213) 555-9876",
+      "fax_no": "(213) 555-4321"
+    }
+  ]
+  

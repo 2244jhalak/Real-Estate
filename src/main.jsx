@@ -18,6 +18,7 @@ import ErrorPage from './components/ErrorPage/ErrorPage';
 import Contact from './components/Contact/Contact';
 import UserProfile from './components/UserProfile/UserProfile';
 import UpdateProfile from './components/UpdateProfile/UpdateProfile';
+import Agents from './components/Agents/Agents';
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
       {
         path:"/updateProfile",
         element:<PrivateRoute><UpdateProfile></UpdateProfile></PrivateRoute>
+      },
+      {
+        path:"/agents",
+        element:<PrivateRoute><Agents></Agents></PrivateRoute>
       }
     ]
   },
