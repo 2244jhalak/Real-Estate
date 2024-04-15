@@ -3,7 +3,7 @@ import { useContext, useState, useEffect } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { getAuth } from "firebase/auth";
 
-const UpdateProfile = () => {
+const UserProfile = () => {
     const { user, setUser } = useContext(AuthContext);
     const auth = getAuth();
     const [displayName, setDisplayName] = useState("");
@@ -24,7 +24,10 @@ const UpdateProfile = () => {
             if (storedEmail) {
                 setEmail(storedEmail);
             }
+            
+            
         }
+        // localStorage.removeItem('updatedEmail');
     }, [user]);
 
     // Function to handle form submission and update user profile
@@ -39,7 +42,7 @@ const UpdateProfile = () => {
             const updatedUser = {
                 ...user,
                 displayName,
-                ...email,
+                email,
                 photoURL
             };
             setUser(updatedUser);
@@ -102,6 +105,6 @@ const UpdateProfile = () => {
     );
 };
 
-export default UpdateProfile;
+export default UserProfile;
 
 

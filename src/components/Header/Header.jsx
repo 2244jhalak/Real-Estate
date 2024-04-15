@@ -11,6 +11,7 @@ const Header = () => {
   const {user,logOut}=useContext(AuthContext);
   const logOutUser=()=>{
     logOut();
+    localStorage.removeItem("updatedEmail")
   }
     const links=
     <>
@@ -56,8 +57,20 @@ const Header = () => {
               </Link>
               
               <Link to="/UserDetails">
-              <div className="tooltip tooltip-bottom" data-tip={user.displayName?user.displayName:user.email}>
-                     <img className="h-12 w-12 rounded-[50%]" src={user.photoURL} alt="" />
+              <div className={` ${user.photoURL ? 'data-tip tooltip tooltip-bottom' : ''}`} data-tip={user.photoURL ? (user.displayName ? user.displayName : user.email) : ''}>
+  
+
+              
+                     {
+                      user.photoURL?
+                      <img className="h-12 w-12 rounded-[50%]" src={user.photoURL} alt="" />
+                      :
+                      <p>{user.displayName?user.displayName:user.email}</p>
+
+
+                     }
+                     
+                     
               </div>
               </Link>
               <button onClick={logOutUser} className="btn bg-black text-white font-bold ml-4">Log Out</button>

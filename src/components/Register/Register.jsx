@@ -42,7 +42,7 @@ const Register = () => {
       .then(result=>{
         console.log(result.user);
         toast('User created successfully');
-        toast('User created successfully')
+       
       })
       
       .catch(error=>{

@@ -23,9 +23,16 @@ const UpdateProfile = () => {
             // Retrieve email from local storage if available
             const storedEmail = localStorage.getItem('updatedEmail');
             if (storedEmail) {
+                
                 setEmail(storedEmail);
+                
+
             }
+            
+            
+            
         }
+        // localStorage.removeItem('updatedEmail');
     }, [user]);
 
     // Function to handle form submission and update user profile
@@ -40,7 +47,7 @@ const UpdateProfile = () => {
             const updatedUser = {
                 ...user,
                 displayName,
-                ...email,
+                email,
                 photoURL
             };
             setUser(updatedUser);
