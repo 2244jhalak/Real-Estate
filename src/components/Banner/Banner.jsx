@@ -6,15 +6,31 @@ import Cover1 from '../../../src/assets/images/Cover1.jpg'
 import Cover2 from '../../../src/assets/images/Cover2.jpg'
 import Cover3 from '../../../src/assets/images/Cover3.jpeg'
 
+
 const Banner = () => {
     return (
         <div className='my-10'>
-            <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
-                 <SwiperSlide><img className='w-full h-[580px] rounded-lg' src={Cover3} alt="" /></SwiperSlide>
-                 <SwiperSlide><img className='w-full h-[580px] rounded-lg' src={Cover1} alt="" /></SwiperSlide>
-                 <SwiperSlide><img className='w-full h-[580px] rounded-lg' src={Cover2} alt="" /></SwiperSlide>
+            <div className='w-full'>
+            
+                <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+                      <SwiperSlide>
+                               <img className='w-full h-[580px] rounded-lg' src={Cover3} alt="" />
+                               
+                      </SwiperSlide>
+                      <SwiperSlide>
+                                <img className='w-full h-[580px] rounded-lg' src={Cover1} alt="" />
+                                
+                               
+                      </SwiperSlide>
+                      <SwiperSlide>
+                                <img className='w-full h-[580px] rounded-lg' src={Cover2} alt="" />
+                                
+                      
+                      </SwiperSlide>
+                      
+                </Swiper>
                 
-            </Swiper>
+            </div>
             
         </div>
     );

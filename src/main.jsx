@@ -19,6 +19,7 @@ import Contact from './components/Contact/Contact';
 import UserProfile from './components/UserProfile/UserProfile';
 import UpdateProfile from './components/UpdateProfile/UpdateProfile';
 import Agents from './components/Agents/Agents';
+import ReportChart from './components/ReportChart/ReportChart';
 
 const router = createBrowserRouter([
   {
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path:"/UserDetails",
         element:<PrivateRoute><UserDetails></UserDetails></PrivateRoute>
+      },
+      {
+        path:"/reportChart",
+        element:<ReportChart></ReportChart>
       },
       {
         path:"/userProfile",
