@@ -15,14 +15,17 @@ const Header = () => {
   }
     const links=
     <>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/contact">Contact</Link></li>
-      {
-        user && 
-        <li>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/contact">Contact</Link>
+      </li>
+      
+      <li>
            <Link to="/agents">Our Agents</Link>
-        </li>
-      }
+      </li>
+      
     </>
     return (
         <div>
@@ -56,7 +59,7 @@ const Header = () => {
                   <button className="btn btn-ghost">User Profile</button>
               </Link>
               
-              <Link to="/UserDetails">
+              
               <div className={` ${user.photoURL ? 'data-tip tooltip tooltip-bottom' : ''}`} data-tip={user.photoURL ? (user.displayName ? user.displayName : user.email) : ''}>
   
 
@@ -72,7 +75,7 @@ const Header = () => {
                      
                      
               </div>
-              </Link>
+              
               <button onClick={logOutUser} className="btn bg-black text-white font-bold ml-4">Log Out</button>
 
            </div>

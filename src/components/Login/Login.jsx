@@ -4,6 +4,8 @@ import { GoogleAuthProvider, signInWithPopup, GithubAuthProvider } from "firebas
 import auth from "../../firebase/firebase.config";
 import { AuthContext } from "../../provider/AuthProvider";
 import { useContext } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
@@ -22,10 +24,13 @@ const handleLogin=e=>{
   signInUser(email,password)
   .then(result=>{
     console.log(result.user);
+    
     navigate(location?.state?location.state:'/');
+    
   })
   .catch(error=>{
     console.log(error);
+    toast("Wrong email/password. Try again");
   })
 }
 const handleGoogle=()=>{
@@ -91,6 +96,7 @@ const handleGithub=()=>{
     
   </div>
 </div>
+<ToastContainer></ToastContainer>
             
         </div>
     );
