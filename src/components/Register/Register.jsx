@@ -57,7 +57,7 @@ const Register = () => {
       <h1 className="text-5xl font-bold">Register now!</h1>
       
     </div>
-    <div className="card shrink-0 w-[350px] shadow-2xl bg-base-100">
+    <div className="card shrink-0 lg:w-[350px] md:w-[350px] w-[280px] shadow-2xl bg-base-100">
       <form onSubmit={handleRegister} className="card-body">
         <div className="form-control">
           <label className="label">
@@ -82,7 +82,7 @@ const Register = () => {
             <span className="label-text">Password</span>
           </label>
           <input type={showPassword ? 'text' : 'password'} placeholder="password" name="password" className="input input-bordered" required />
-          <p className="absolute bottom-[166px] right-12" onClick={()=>setShowPassword(!showPassword)}>
+          <p className="absolute lg:bottom-[166px] md:bottom-[166px] bottom-[189px] right-12" onClick={()=>setShowPassword(!showPassword)}>
             {
                 showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
             }

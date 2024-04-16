@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 const Contact = () => {
   return (
-    <div className="w-full">
-      <MapContainer center={[34.0522, -118.2437]} zoom={10} className="h-[700px]">
+    <div className="w-full absolute">
+      <MapContainer center={[34.0522, -118.2437]} zoom={10} className="h-96 md:h-80 lg:h-96 relative z-30">
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -19,7 +19,7 @@ const Contact = () => {
         
       
       </MapContainer>
-      <div className='mb-20 bg-gray-200 py-5 px-12 grid grid-cols-2'>
+      <div className='mb-20 bg-gray-200 py-5 px-12 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1'>
         <div className='space-y-3'>
           <h3 className='text-2xl font-semibold'>Our Address</h3>
           <p className='font-semibold'>321 Sunset Avenue, Apt 3B</p>
@@ -43,6 +43,9 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
+
 
 
 

@@ -16,8 +16,8 @@ const Report = () => {
     }, []);
       
     return (
-        <div className=" bg-blue-950 rounded-lg space-y-2 flex justify-between px-8 mx-20 my-16">
-            <div className="py-16">
+        <div className=" bg-blue-950 rounded-lg space-y-2 flex lg:flex-row md:flex-col flex-col justify-between px-8 lg:mx-20 my-16">
+            <div className="lg:py-16">
                 <h3 className="text-xl text-orange-500">Are you selling?</h3>
               
                 <div className="text-white text-3xl">
@@ -28,7 +28,7 @@ const Report = () => {
 
             </div>
             <div>
-                <div className="flex items-center">
+                <div className="flex lg:flex-row md:flex-col flex-col items-center">
                     <Link to="/reportChart">
                         <button className="bg-orange-500 btn text-white border-0">Request a valuation</button>
                     </Link>

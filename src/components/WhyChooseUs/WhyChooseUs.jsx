@@ -11,7 +11,7 @@ const WhyChooseUs = () => {
       <h1 className="text-4xl font-bold">Why Choose Us</h1>
       <p className="py-6">It’s our job to get you the best price for your home and make sure that you get the best possible deal on the property</p>
     </div>
-    <div className="card shrink-0 w-[700px] shadow-2xl bg-base-100">
+    <div className="card shrink-0 lg:w-[700px] md:w-[700px] w-full shadow-2xl bg-base-100">
       <div className="flex px-5 my-5">
         <img className="w-28" src={icon1} alt="" />
         <div className="ml-5 space-y-2">

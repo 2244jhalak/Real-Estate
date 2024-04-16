@@ -6,7 +6,7 @@ const DisplayProperty = ({property}) => {
     const {image,estate_title,location,status,area,price,id} =property;
     return (
         <div>
-            <div className="card w-96 h-[500px] bg-base-100 shadow-xl">
+            <div className="card w-full h-[500px] bg-base-100 shadow-xl lg:mb-0 md:mb-0 mb-3">
   <figure>
     <img className='h-60 w-full relative' src={image} alt="Shoes" />
     <p className='absolute left-0 rounded-tl-lg top-0 bg-green-600 px-3 text-white font-semibold py-1'>{status}</p>

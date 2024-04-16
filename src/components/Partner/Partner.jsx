@@ -8,7 +8,7 @@ const Partner = () => {
     return (
         <div className="my-10 space-y-2">
             <h3 className="text-3xl font-bold text-center">Our Partner</h3>
-            <div className="flex">
+            <div className="flex gap-2 lg:gap-0 md:gap-0">
             <div className="w-1/5"><img src={Partner1} alt="" /></div>
             <div className="w-1/5"><img src={Partner2} alt="" /></div>
             <div className="w-1/5"><img src={Partner3} alt="" /></div>
