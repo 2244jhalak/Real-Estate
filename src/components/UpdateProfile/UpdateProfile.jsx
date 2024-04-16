@@ -65,7 +65,7 @@ const UpdateProfile = () => {
     return (
         <div className="text-center my-10">
             <h2 className="text-3xl font-bold">Update Profile</h2>
-            <div className="mt-5 flex items-center justify-center border-2 mx-[450px] py-5 rounded-lg border-black">
+            <div className="mt-5 flex items-center justify-center border-2 lg:mx-[350px] md:mx-[200px] mx-[15px] py-5 rounded-lg border-black">
                 {user && (
                     <form onSubmit={handleSubmit}>
                         <label>
