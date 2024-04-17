@@ -1,4 +1,4 @@
-import { FaUser,FaUserSlash } from 'react-icons/fa';
+import { FaUser,FaUserSlash,FaRegUserCircle } from 'react-icons/fa';
 
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
@@ -12,7 +12,7 @@ const Header = () => {
   const {user,logOut}=useContext(AuthContext);
   const logOutUser=()=>{
     logOut();
-    localStorage.removeItem("updatedEmail")
+    
   }
     const links=
     <>
@@ -41,7 +41,7 @@ const Header = () => {
         
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl lg:ml-0 md:ml-5 ml-5">DreamDwellings</a>
+    <a className="btn btn-ghost lg:text-3xl md:text-xl text-xl lg:ml-0 md:ml-5 ml-5">DreamDwellings</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1 md:mr-20">
@@ -60,7 +60,7 @@ const Header = () => {
     
       
     
-    <ul className={`${open ?'top-12 block':'-top-80'} flex lg:flex-row flex-col px-2 py-5 absolute lg:static bg-blue-950 rounded-lg text-white -ms-20 duration-1000`}>
+    <ul className={`${open ?'top-12 block':'-top-80'} flex lg:flex-row flex-col px-2 py-5 absolute lg:static ${user?'bg-blue-950':''} rounded-lg text-white -ms-20 duration-1000`}>
       {
       user ? 
            <div className="flex items-center lg:flex-row flex-col">
@@ -73,18 +73,21 @@ const Header = () => {
               </Link>
               
               
-              <div className={` ${user.photoURL ? 'data-tip tooltip tooltip-bottom' : ''}`} data-tip={user.photoURL ? (user.displayName ? user.displayName : user.email) : ''}>
+              <div className="tooltip tooltip-bottom" data-tip={user.displayName}>
   
 
               
-                     {
-                      user.photoURL?
-                      <img className="h-12 w-12 rounded-[50%]" src={user.photoURL} alt="" />
-                      :
-                      <p>{user.displayName?user.displayName:user.email}</p>
+                     
+                      {
+                        user.photoURL?
+                        <img className="h-12 w-12 rounded-[50%]" src={user.photoURL} alt="" />
+                        :
+                        <FaRegUserCircle className='text-2xl'></FaRegUserCircle>
+                      }
+                      
 
 
-                     }
+                     
                      
                      
               </div>

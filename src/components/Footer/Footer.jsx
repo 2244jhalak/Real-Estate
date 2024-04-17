@@ -3,15 +3,16 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <div>
+        <div className="bg-neutral text-neutral-content">
             <footer className="footer p-10 bg-neutral text-neutral-content">
   <aside>
     
     <h3 className="text-2xl font-semibold text-white">Dreamdwellings</h3>
-    <p className="mb-3 text-white">Where Imagination Meets Reality</p>
+    <p className="mb-3 text-white text-lg">Where Imagination Meets Reality</p>
       <Link className="hover:text-orange-400" to="/">Home</Link>
       <Link className="hover:text-orange-400" to="/contact">Contact</Link>
       <Link className="hover:text-orange-400" to="/agents">Our Agents</Link>
+      
   </aside> 
   <nav>
     <h6 className="footer-title">Follow us on</h6> 
@@ -24,6 +25,8 @@ const Footer = () => {
     </div>
   </nav>
 </footer>
+<p className="pl-10 text-sm">&copy; 2024 Dreamdwellings- All right reserved</p>
+
             
         </div>
     );

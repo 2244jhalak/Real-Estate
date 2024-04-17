@@ -1,16 +1,17 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { FaGoogle,FaGithub } from 'react-icons/fa';
+
+import { FaGoogle,FaGithub,FaEye,FaEyeSlash } from 'react-icons/fa';
 import { GoogleAuthProvider, signInWithPopup, GithubAuthProvider } from "firebase/auth";
 import auth from "../../firebase/firebase.config";
 import { AuthContext } from "../../provider/AuthProvider";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 
 const Login = () => {
-  
+  const [showPassword,setShowPassword]= useState(false);
 const {signInUser} = useContext(AuthContext);
 const location=useLocation();
   const navigate=useNavigate();  
@@ -24,6 +25,7 @@ const handleLogin=e=>{
   signInUser(email,password)
   .then(result=>{
     console.log(result.user);
+    
     
     navigate(location?.state?location.state:'/');
     
@@ -71,12 +73,19 @@ const handleGithub=()=>{
           </label>
           <input type="email" placeholder="email" name="email" className="input input-bordered" required />
         </div>
+        <div className="relative">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" placeholder="password" name="password" className="input input-bordered" required />
+          <input type={showPassword ? 'text' : 'password'} placeholder="password" name="password" className="input input-bordered" required />
+          <p className="absolute lg:bottom-[14px] md:bottom-[14px] bottom-[14px] right-5" onClick={()=>setShowPassword(!showPassword)}>
+            {
+                showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
+            }
+          </p>
          
+        </div>
         </div>
         <div className="form-control mt-6">
           <button className="btn btn-primary font-bold text-white">Login</button>

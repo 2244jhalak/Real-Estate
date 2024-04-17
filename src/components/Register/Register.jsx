@@ -77,17 +77,19 @@ const Register = () => {
           </label>
           <input type="text" placeholder="photoURL" name="photo" className="input input-bordered" required />
         </div>
+        <div className="relative">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Password</span>
           </label>
           <input type={showPassword ? 'text' : 'password'} placeholder="password" name="password" className="input input-bordered" required />
-          <p className="absolute lg:bottom-[166px] md:bottom-[166px] bottom-[189px] right-12" onClick={()=>setShowPassword(!showPassword)}>
+          <p className="absolute lg:bottom-[14px] md:bottom-[14px] bottom-[14px] right-5" onClick={()=>setShowPassword(!showPassword)}>
             {
                 showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>
             }
           </p>
          
+        </div>
         </div>
         <div className="form-control mt-6">
           <button className="btn btn-primary font-bold text-white">Register</button>

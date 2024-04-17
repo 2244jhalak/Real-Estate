@@ -12,21 +12,21 @@ const WhyChooseUs = () => {
       <p className="py-6">It’s our job to get you the best price for your home and make sure that you get the best possible deal on the property</p>
     </div>
     <div className="card shrink-0 lg:w-[700px] md:w-[700px] w-full shadow-2xl bg-base-100">
-      <div className="flex px-5 my-5">
+      <div className="flex lg:flex-row md:flex-row flex-col px-5 my-5">
         <img className="w-28" src={icon1} alt="" />
         <div className="ml-5 space-y-2">
             <h4 className="text-2xl font-semibold">Wide Range of Properties</h4>
             <p>With a robust selection of popular properties on hand, as well as leading properties from real estate experts.</p>
         </div>
       </div>
-      <div className="flex px-5 my-5">
+      <div className="flex lg:flex-row md:flex-row flex-col px-5 my-5">
         <img className="w-28" src={icon2} alt="" />
         <div className="ml-5 space-y-2">
             <h4 className="text-2xl font-semibold">Financing Made Easy</h4>
             <p>Our stress-free finance department that can find financial solutions to save you money.</p>
         </div>
       </div>
-      <div className="flex px-5 my-5">
+      <div className="flex lg:flex-row md:flex-row flex-col px-5 my-5">
         <img className="w-28" src={icon3} alt="" />
         <div className="ml-5 space-y-2">
             <h4 className="text-2xl font-semibold">Thrusted by Thousands</h4>

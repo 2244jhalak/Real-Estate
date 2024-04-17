@@ -19,11 +19,8 @@ const UserProfile = () => {
             setPhotoURL(user.photoURL || "");
             setEmail(user.email || "");
 
-            // Retrieve email from local storage if available
-            const storedEmail = localStorage.getItem('updatedEmail');
-            if (storedEmail) {
-                setEmail(storedEmail);
-            }
+                
+            
             
             
         }
@@ -50,7 +47,7 @@ const UserProfile = () => {
             setIsEditing(false); // Disable editing mode after saving
 
             // Update local storage with new email
-            localStorage.setItem('updatedEmail', email);
+           
         } catch (error) {
             console.error('Error updating profile:', error.message);
             setError('Failed to update profile. Please try again.');

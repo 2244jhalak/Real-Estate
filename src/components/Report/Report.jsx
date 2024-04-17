@@ -32,7 +32,7 @@ const Report = () => {
                     <Link to="/reportChart">
                         <button className="bg-orange-500 btn text-white border-0">Request a valuation</button>
                     </Link>
-                    <div data-aos="fade-left" data-aos-duration="4000" data-aos-delay="5000">
+                    <div data-aos="fade-bottom" data-aos-duration="4000" data-aos-delay="500">
                             <img className="h-64" src={Agent} alt="" />
                     </div>
                        

@@ -15,7 +15,7 @@ const PropertyDetails = () => {
         <div className='px-20 my-16'>
             <div className='animate__animated animate__backInDown animate__delay-0s'>
             <div className="card lg:card-side bg-base-100 shadow-xl">
-  <figure><img className='h-[400px]' src={property.image} alt="Album"/></figure>
+  <figure><img className='lg:h-[400px] md:h-[400px] h-[200px]' src={property.image} alt="Album"/></figure>
   <div className="p-5 space-y-3">
     <h2 className="text-3xl font-bold">{property.estate_title}</h2>
     <p>{property.description}</p>
@@ -32,7 +32,7 @@ const PropertyDetails = () => {
         
 
     </div>
-    <div className='flex items-center'>
+    <div className='flex lg:flex-row md:flex-row flex-col items-center space-y-2'>
         <p className='bg-green-600 text-white rounded-xl mr-3 px-3 py-1'>{property.facilities[0]}</p>
         <p className='bg-green-600 text-white rounded-xl mr-3 px-3 py-1'>{property.facilities[1]}</p>
         <p className='bg-green-600 text-white rounded-xl mr-3 px-3 py-1'>{property.facilities[2]}</p>
