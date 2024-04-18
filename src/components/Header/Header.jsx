@@ -29,7 +29,7 @@ const Header = () => {
                    {open?<FaWindowClose className='text-white'></FaWindowClose>:<FaBars className='text-white'></FaBars>}
              </p>
          </div> 
-         <h3 className='text-3xl text-white lg:pl-2 md:pr-2 pr-2'>Dreamdwellings</h3>
+         <h3 className='text-3xl text-white lg:pl-2 md:pr-2 pr-2 font-semibold'>Dreamdwellings</h3>
          <ul className={`${open ?'top-12 block z-50':'-top-72 text-white bg-blue-950'} flex lg:flex-row flex-col px-2 py-2  absolute lg:static items-center rounded-b-lg ms-6 duration-1000 lg:gap-20 bg-blue-950 text-white`}>
         <li className='hover:text-orange-400'><Link to="/">Home</Link></li>
         <li className='hover:text-orange-400'><Link to="/contact">Contact</Link></li>

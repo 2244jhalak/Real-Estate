@@ -7,7 +7,7 @@ const Footer = () => {
             <footer className="footer p-10 bg-neutral text-neutral-content">
   <aside>
     
-    <h3 className="text-2xl font-semibold text-white">Dreamdwellings</h3>
+    <h3 className="text-3xl font-semibold text-white">Dreamdwellings</h3>
     <p className="mb-3 text-white text-lg">Where Imagination Meets Reality</p>
       <Link className="hover:text-orange-400" to="/">Home</Link>
       <Link className="hover:text-orange-400" to="/contact">Contact</Link>
