@@ -1,8 +1,9 @@
-import { FaUser,FaUserSlash,FaRegUserCircle } from 'react-icons/fa';
+import {FaRegUserCircle,FaWindowClose,FaBars } from 'react-icons/fa';
 
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
+import { Link } from 'react-router-dom';
 
 
 
@@ -14,54 +15,27 @@ const Header = () => {
     logOut();
     
   }
-    const links=
-    <>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/contact">Contact</Link>
-      </li>
-      
-      <li>
-           <Link to="/agents">Our Agents</Link>
-      </li>
-      
-    </>
-    return (
-        <div className=''>
-            <div className="navbar bg-base-100">
-  <div className="navbar-start">
-    <div className="dropdown z-50">
-      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-      </div>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        {links}
+    
         
-      </ul>
-    </div>
-    <a className="btn btn-ghost lg:text-3xl md:text-xl text-xl lg:ml-0 md:ml-5 ml-5">DreamDwellings</a>
-  </div>
-  <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1 md:mr-20">
-      {links}
-      
-    </ul>
-  </div>
-  <div className="navbar-end pr-10 flex items-center">
 
-      <div className='z-50'>
-      <div onClick={()=>setOpen(!open)} className='container mx-auto lg:hidden'>
-      <p className=''>
-      {open?<FaUserSlash></FaUserSlash>:<FaUser></FaUser>}
-      </p>
-    </div> 
+  return (
+    <div className='sticky top-0 z-50'>
+      <nav className='container mx-auto'>
+      <div className='flex items-center justify-between bg-blue-950'>
+         
     
-      
-    
-    <ul className={`${open ?'top-12 block':'-top-80'} flex lg:flex-row flex-col px-2 py-5 absolute lg:static ${user?'bg-blue-950':''} rounded-lg text-white -ms-20 duration-1000`}>
-      {
+         <div onClick={()=>setOpen(!open)} className='container mx-auto p-5 lg:hidden'>
+             <p className=''>
+                   {open?<FaWindowClose className='text-white'></FaWindowClose>:<FaBars className='text-white'></FaBars>}
+             </p>
+         </div> 
+         <h3 className='text-3xl text-white lg:pl-2 md:pr-2 pr-2'>Dreamdwellings</h3>
+         <ul className={`${open ?'top-12 block z-50':'-top-72 text-white bg-blue-950'} flex lg:flex-row flex-col px-2 py-2  absolute lg:static items-center rounded-b-lg ms-6 duration-1000 lg:gap-20 bg-blue-950 text-white`}>
+        <li className='hover:text-orange-400'><Link to="/">Home</Link></li>
+        <li className='hover:text-orange-400'><Link to="/contact">Contact</Link></li>
+        <li className='hover:text-orange-400'><Link to="/agents">Agents</Link></li>
+        <li>
+        {
       user ? 
            <div className="flex items-center lg:flex-row flex-col">
               
@@ -92,7 +66,7 @@ const Header = () => {
                      
               </div>
               
-              <button onClick={logOutUser} className="btn bg-black text-white font-bold ml-4">Log Out</button>
+              <button onClick={logOutUser} className="btn bg-black text-white font-bold lg:ml-4">Log Out</button>
               </div>
 
           
@@ -101,16 +75,19 @@ const Header = () => {
                     <button className="btn btn-primary font-bold ml-4 text-white">Login</button>
             </Link>
     }
-    </ul>
-        </div>
+    </li>
+      
+        </ul>
+      </div>
+    
+      
     
     
-  </div>
-  
-</div>
-            
-        </div>
-    );
+    </nav>
+    </div>
+
+  );
 };
 
 export default Header;
+
