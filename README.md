@@ -15,6 +15,9 @@ This Real Estate Website project is designed to provide a comprehensive platform
 - Tailwind CSS
 
 ## How to Run Locally
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/2244jhalak/real-estate-website.git
+- Clone the repository: `https://github.com/2244jhalak/Art-Craft-Store.git`
+- Install dependencies: `npm install`
+- Start the server: `npm run dev`
+
+## Live Link
+- [Dreamdwellings](https://b9a9-real-estate-2244jhalak.web.app/)
