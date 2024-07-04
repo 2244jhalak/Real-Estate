@@ -1,8 +1,20 @@
-# React + Vite
+## Overview
+This Real Estate Website project is designed to provide a comprehensive platform for property listings and real estate transactions. Users can browse properties, view details, and contact sellers, making it convenient to find their ideal property.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+- **User Registration and Authentication**:
+  - Secure user registration and login using Firebase authentication.
+- **Property Listings**:
+  - Browse detailed property listings with images and descriptions.
+- **Responsive Design**:
+  - Ensures a seamless experience across desktop and mobile devices.
 
-Currently, two official plugins are available:
+## Key Technologies
+- React.js
+- Firebase Authentication
+- Tailwind CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## How to Run Locally
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/2244jhalak/real-estate-website.git
